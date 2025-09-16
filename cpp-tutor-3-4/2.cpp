@@ -4,32 +4,32 @@ using namespace std;
 
 int main() {
     int64_t a, b;
-    char operation;
+    char oper;
     cout << "Write your expression (like this: 2 * 2): \n";
-    cin >> a >> operation >> b;
+    cin >> a >> oper >> b;
 
-    int64_t result;
-    switch (operation) {
+    int64_t res;
+    switch (oper) {
         case '+':
-            result = a + b;
+            res = a + b;
             break;
         case '-':
-            result = a - b;
+            res = a - b;
             break;
         case '*':
-            result = a * b;
+            res = a * b;
             break;
         case '/':
         case ':':
-            result = a / b;
+            res = a / b;
             break;
         case '%':
-            result = a % b;
+            res = a % b;
             break;
         default: // неправильно введён, либо отсутствует знак арифметической операции
             cout << "Check arithmetic operator!\n";
-            result = 0;
+            res = 0;
     }
 
-    cout << a << " " << operation << " " << b << " = " << result << "\n";
+    cout << a << " " << oper << " " << b << " = " << res << "\n";
 }
