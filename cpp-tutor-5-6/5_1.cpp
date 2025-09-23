@@ -6,12 +6,12 @@ using namespace std;
 int main() {
     // Seed генератора ранд. чисел
     srand(time(0));
-    // Инициализируем массив
+    // Инициализируем переменную длинны
     int arrayLength;
-    // Спрашиваем у пользователя длину массива
+    // спрашиваем у юзера длину массива
     cout << "Enter the length of the array: ";
     cin >> arrayLength;
-    // валидвция ввода
+    // проверка корректности ввода
     if (arrayLength <= 0) {
         cout << "Array length must be a positive number!" << std::endl;
         return 1;
@@ -22,7 +22,7 @@ int main() {
         arr[i] = rand() % 100 + 1;
     }
     // Выводим массив
-    cout << "\nGenerated array: ";
+    cout << "\nRandomly generated array: ";
     for (int i = 0; i < arrayLength; ++i) {
         cout << arr[i];
         if (i < arrayLength - 1) {
