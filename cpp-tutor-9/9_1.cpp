@@ -3,7 +3,6 @@
 using namespace std;
 // Кузнецов Святослав Владимирович ИНБО-31-25
 
-// функция удаления дубликатов
 vector<int> removeDuplicates(const vector<int> &arr) {
     vector<int> result; // массив для результата
     bool found; // флаг проверки дубликата

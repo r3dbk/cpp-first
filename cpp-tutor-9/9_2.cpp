@@ -3,7 +3,6 @@
 using namespace std;
 // Кузнецов Святослав Владимирович ИНБО-31-25
 
-// функция для сравнения строк без учета регистра
 bool isEqual(const string& str1, const string& str2) {
     // первичная проверка эквивалентности длин
     if (str1.length() != str2.length()) {
