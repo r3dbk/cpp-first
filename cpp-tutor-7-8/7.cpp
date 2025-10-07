@@ -1,31 +1,31 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include <utility>
+#include <sstream>
 using namespace std;
 // Кузнецов Святослав Владимирович ИНБО-31-25
 
 int main() {
     int n;
-    cin >> n; // считываем количество друзей
-    // first хранит сумму первых двух критериев, second - 3го
-    pair<pair<double, double>, double> total_scores = {{0, 0}, 0};
-    // обрабатываем данные каждого
+    cin >> n;
+    cin.ignore(); // чищу буфера чтобы адекватно работал getline
+    double sums[3] = {0}; // массив для хранения сумм критериев
     for (int i = 0; i < n; i++) {
+        string line;
+        getline(cin, line); // читаем всю строку с данными друга
+        stringstream ss(line); // поток для разбора строки
         string surname, name;
-        double score1, score2, score3;
-        // считываем фамилию, имя и три оценки
-        cin >> surname >> name >> score1 >> score2 >> score3;
-        // накапливаем суммы оценок в паре
-        total_scores.first.first += score1;
-        total_scores.first.second += score2;
-        total_scores.second += score3;
+        double scores[3];
+        // разбор строки на отдельные данные
+        ss >> surname >> name >> scores[0] >> scores[1] >> scores[2];
+        // добавление каждой оценки к соответствующей сумме
+        for (int j = 0; j < 3; j++) {
+            sums[j] += scores[j];
+        }
     }
-    // вычисляем средние значения и выводим
-    double avg1 = total_scores.first.first / n;
-    double avg2 = total_scores.first.second / n;
-    double avg3 = total_scores.second / n;
+    // выводим сред. значения с одним знаком после запятой
     cout << fixed << setprecision(1);
-    cout << avg1 << " " << avg2 << " " << avg3 << endl;
+    cout << sums[0] / n << " " << sums[1] / n << " " << sums[2] / n << endl;
+
     return 0;
 }
