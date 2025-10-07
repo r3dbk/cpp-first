@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include <limits> // для использования INT_MIN и INT_MAX
-
+#include <limits>
 using namespace std;
+// Кузнецов Святослав Владимирович ИНБО-31-25
 
 int main() {
     int size;

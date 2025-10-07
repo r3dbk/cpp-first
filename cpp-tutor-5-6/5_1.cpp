@@ -3,6 +3,8 @@
 #include <ctime>
 #include <vector>
 using namespace std;
+// Кузнецов Святослав Владимирович ИНБО-31-25
+
 int main() {
     // Seed генератора ранд. чисел
     srand(time(0));
