@@ -3,6 +3,7 @@
 using namespace std;
 // Кузнецов Святослав Владимирович ИНБО-31-25
 
+// передаём в функцию строку параметром
 int stringLength(const string& str) {
     int count = 0;
     // используем while пока не дойдём до конца строки
@@ -13,6 +14,7 @@ int stringLength(const string& str) {
 }
 
 int main() {
+    // инициализируем строку и записываем в неё ввод
     string s1;
     cout << "Enter the string: ";
     getline(cin, s1);

@@ -3,6 +3,7 @@
 using namespace std;
 // Кузнецов Святослав Владимирович ИНБО-31-25
 
+// передаём параметрами первую и вторую строки для сравнения
 bool isEqual(const string& str1, const string& str2) {
     // первичная проверка эквивалентности длин
     if (str1.length() != str2.length()) {
